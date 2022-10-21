@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React and Plain JS calulator</title>
+    <link rel="stylesheet" type="text/css" href="../src/siteNavigation.css">
+    <script src="../src/siteNavigation.js"></script>
+  </head>
+  <body>
+    <noscript>You need JavaScript enabled to run this page</noscript>
+    <site-navigation dataClass="main"></site-navigation>
+    <div id="root"></div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- React Components -->
+    <!-- <script src="../src/like_button.js"></script> -->
+    <script type="module" src="../src/calculatorIndex.js"></script>
+  </body>
+</html>

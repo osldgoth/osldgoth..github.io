@@ -1,0 +1,62 @@
+/*
+  '*'		All
+	'abc' Element Selector <body>, <p>, <img> etc
+	'#' 	ID selector (used for javascript - unofficial internet rule)
+	'.' 	CLASS selector (used for css rules - unofficial internet rule)
+
+  '~'     PRECEDED by
+  '+'     Immediately after
+  '>'     PARENT (direct child)
+  ' '     ALL inside
+  :       pseudo-class  -> used to style an element based on its state.
+  ::      psudo-element -> used to style a specific part of an element.
+*/
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+	background: radial-gradient(hsl(0, 0%, 10%) 75%, hsl(0, 0%, 15%));
+  font-family: "AvenirNext","Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 1080px;
+  width: 100%;
+  
+}
+
+/* Style the header */
+.header {
+  position: fixed;
+  width: 100%;
+  min-height: 80px;
+  background-color: hsl(0, 0%, 10%);
+}
+
+
+div {
+  color: hsl(0, 50%, 100%);
+}
+
+.home {
+  display: flex;
+  position: fixed;
+  top: 45%;
+  left: 10%;
+  margin: 0 10px;
+}
+
+.home > img {
+  border-radius: 50%;
+  max-height: 150px;
+}
+
+.center {
+  align-items: center;
+}
+
+.home > p {
+  padding-left: 10px;
+  font-weight: 200;
+  font-size: larger;
+}

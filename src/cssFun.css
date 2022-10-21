@@ -1,0 +1,291 @@
+/*
+  '*'		All
+	'abc' Element Selector <body>, <p>, <img> etc
+	'#' 	ID selector (used for javascript - unofficial internet rule)
+	'.' 	CLASS selector (used for css rules - unofficial internet rule)
+
+  '~'     PRECEDED by
+  '+'     Immediately after
+  '>'     PARENT
+  ' '     ALL inside
+*/
+
+/* ***GRID*** */
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --box-size: 8px;
+  --box-color: #e66b00;
+}
+
+
+body {
+  font-family: "AvenirNext","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.125em;
+  line-height: 1.5em;
+}
+
+/* The grid container */
+.grid-container {
+  /* position: absolute; */
+  display: grid;
+  grid-template-areas: 
+    'header' 
+    'middle' 
+    'footer';
+	grid-column-gap: 10px;
+} 
+
+/* Style the header */
+.header {
+  clear: both;
+  position: fixed;
+  width: 100%;
+  min-height: 80px;
+  background-color: hsl(0, 0%, 10%);
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+	/* background-color: hsl(190, 60%, 40%) */
+}
+
+.middle > p,
+.middle > h3 {
+  text-align: center;
+}
+
+/* I'm not a huge fan of grid-template-areas */
+.middleGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /*  well this is 'easier' */
+  /* grid-template-columns: auto; /* what about auto*/
+  /* grid-template-columns: ; /* what about this one */
+  /* grid-template-areas:
+  'row-just-start row-just-end row-just-center' 
+  'row-just-between row-just-around row-just-even'
+  'col-just-start col-just-end col-just-center '
+  'col-just-between col-just-around col-just-even'
+  'row-algn-start row-algn-end row-algn-center '
+  'row-algn-between row-algn-around random'
+  'dotted-border dashed-border solid-border '
+  'double-border groove-border ridge-border'; */
+  /* 
+    I don't like this grid as it does not lend to smaller screens. what is the work around?
+    - I could use @media to define a smaller grid. which would work however will still be quite rigid.
+  */
+  grid-gap: 5px;
+  margin-left: 1em;
+  margin-right: 1em;
+
+}
+
+/* @media */
+
+@media screen and (max-width: 800px) {
+  .middleGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .middleGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .middleGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .middleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: hsl(155, 50%, 75%);
+  padding: 10px;
+  text-align: center;
+}
+
+.combiner-grid {
+  display: grid;
+  border: 1px solid hsl(86, 100%, 40%);
+}
+
+.center {
+  justify-items: center;
+}
+
+.title{
+  text-align: center;
+  height: 10ch;
+  padding: 0;
+  margin: 0;
+}
+
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  background: hsl(0,0%,0%);/* hsl(208, 100%, 45%); */
+}
+
+.flex-container-row-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: calc(var(--box-size)*12);
+  width: 60px;
+  background: hsl(0,0%,0%);/* hsl(208, 100%, 45%); */
+}
+
+.flex-container-row-properties {
+  display: flex;
+  flex-direction: row;
+  background: hsl(0,0%,0%);/* hsl(208, 100%, 45%); */
+}
+
+.flex-container-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:	hsl(0,0%,0%);/* hsl(208, 100%, 45%); */
+  height: calc(var(--box-size)*21);
+}
+
+.box {
+  background: hsl(28, 100%, 45%);
+  border: 1.5px solid hsl(28, 100%, 85%);
+  border-radius: calc(var(--box-size)/7);
+  margin: 2px;
+  width: var(--box-size);
+  height: var(--box-size);
+  box-shadow: 2px 2px 5px hsl(28, 100%, 70%) inset;
+}
+
+.box2 {
+  background: hsl(28, 100%, 45%);
+  border: 1.5px solid hsl(28, 100%, 85%);
+  border-radius: calc(var(--box-size)/7);
+  margin: 2px;
+  width: calc(var(--box-size) * 2);
+  height: var(--box-size);
+  box-shadow: 2px 2px 5px hsl(28, 100%, 70%) inset;
+}
+
+.box3 {
+  background: hsl(28, 100%, 45%);
+  border: 1.5px solid hsl(28, 100%, 85%);
+  border-radius: calc(var(--box-size)/7);
+  margin: 2px;
+  width: calc(var(--box-size) * 3);
+  height: var(--box-size);
+  box-shadow: 2px 2px 5px hsl(28, 100%, 70%) inset;
+}
+
+.box4 {
+  background: hsl(28, 100%, 45%);
+  border: 1.5px solid hsl(28, 100%, 85%);
+  border-radius: calc(var(--box-size)/7);
+  margin: 2px;
+  width: calc(var(--box-size) * 4);
+  height: var(--box-size);
+  box-shadow: 2px 2px 5px hsl(28, 100%, 70%) inset;
+}
+
+.box5 {
+  background: hsl(28, 100%, 45%);
+  border: 1.5px solid hsl(28, 100%, 85%);
+  border-radius: calc(var(--box-size)/7);
+  margin: 2px;
+  width: calc(var(--box-size) * 5);
+  height: var(--box-size);
+  box-shadow: 2px 2px 5px hsl(28, 100%, 70%) inset;
+}
+
+.just-start {
+  justify-content: flex-start;
+}
+
+.algn-start {
+  align-content: flex-start;
+}
+
+.just-end {
+  justify-content: flex-end;
+}
+
+.algn-end {
+  align-content: flex-end;
+}
+
+.just-center {
+  justify-content: center;
+}
+
+.algn-center {
+  align-content: center;
+}
+
+.just-between {
+  justify-content: space-between;
+}
+
+.algn-between {
+  align-content: space-between;
+}
+
+.just-around {
+  justify-content: space-around;
+}
+
+.algn-around {
+  align-content: space-around;
+}
+
+.just-even {
+  justify-content: space-evenly;
+}
+
+.algn-none {
+  align-content: center;
+}
+
+.dotted-border {
+  margin: 2px;
+  border: 4px dotted hsl(28, 100%, 45%); /* width | style | color */
+}
+
+.dashed-border {
+  margin: 2px;
+  border: 4px dashed hsl(28, 100%, 45%); /* width | style | color */
+}
+
+.solid-border {
+  margin: 2px;
+  border: 4px solid hsl(28, 100%, 45%); /* width | style | color */
+}
+
+.double-border {
+  margin: 2px;
+  border: 4px double hsl(28, 100%, 45%); /* width | style | color */
+}
+
+.groove-border {
+  margin: 2px;
+  border: 4px groove hsl(28, 100%, 45%); /* width | style | color */
+}
+
+.ridge-border {
+  margin: 2px;
+  border: 4px ridge hsl(28, 100%, 45%); /* width | style | color */
+}

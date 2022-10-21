@@ -1,0 +1,138 @@
+/*
+  '*'		All
+	'abc' Element Selector <body>, <p>, <img> etc
+	'#' 	ID selector (used for javascript - unofficial internet rule)
+	'.' 	CLASS selector (used for css rules - unofficial internet rule)
+
+  '~'     PRECEDED by
+  '+'     Immediately after
+  '>'     PARENT (direct child)
+  ' '     ALL inside
+  :       pseudo-class  -> used to style an element based on its state.
+  ::      psudo-element -> used to style a specific part of an element.
+*/
+
+/* 
+  using .menu::before::after doesn't work because there are gaps between 'lines', 
+  unless border is used as a hack with background color same as 'parent' background color
+  and maybe it doesn't work in chrome?
+  oh of course - extending the border out messes with the shape
+*/
+
+/* start of Hamburger */
+
+.menu {
+  /* outline: darkgoldenrod solid 1px; */
+  position: relative;
+  display: block;
+  height: 30px;
+  width: 20px;
+  right: 80px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.menu .bar-1 {
+  position: absolute;
+  top: 10px;
+  content: '';
+  height: 3px;
+  width: 20px;
+  background-color: darkgrey;
+  border-radius: 5px;
+  transition: transform 3.5s cubic-bezier(.29,.86,.2,.97), top .1s ease-in;
+}
+
+.menu .bar-2 {
+  position: absolute;
+  float: right;
+  content: '';
+  top: 17px;
+  height: 3px;
+  width: 20px;
+  background-color: darkgrey;
+  border-radius: 5px;
+  transition: background-color .1s ease-out;
+}
+
+.menu .bar-3 {
+  position: absolute;
+  top: 24px;
+  content: "";
+  height: 3px;
+  width: 20px;
+  background-color: darkgrey;
+  border-radius: 5px;
+  transition: transform .3s ease-out, top .1s ease-in;
+}
+
+.menu.active .bar-2{
+  background-color: transparent;
+}
+
+.menu.active .bar-1{
+  transform: rotate(3555deg);
+  top: 17px;
+}
+
+.menu.active .bar-3{
+  transform: rotate(225deg);
+  top: 17px;
+}
+
+/* end of Hamburger */
+
+.navigation { /* needs to 'work'/look good for mobile */
+  position: absolute;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.navigation ul {
+  position: relative;
+  top: -100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 20px;
+  margin: 0px;
+  list-style: none;
+  transition: top .1s ease-in;
+}
+
+.navigation.active ul{
+  top: 0px;
+}
+
+.navigation ul li {
+  position: relative;
+  padding-top: 12px;
+}
+
+.navigation ul li a {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 35%);
+  text-transform: uppercase;
+  border: solid 2px hsl(0, 0%, 50%);
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin: 0px 5px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  /* outline: green solid 3px; */
+  background-color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 80%);
+  box-shadow: 20px 10px 20px -13px hsl(167, 100%, 27%);
+}
+
+a.youAreHere {
+  /* color: hsl(0, 22%, 50%); */
+  outline: brown outset 2px;
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tictactoe</title>
+	  <script type="application/javascript" src="../src/tictactoe2.js"></script>
+		<script src="../src/siteNavigation.js"></script>
+    <link rel="stylesheet" type="text/css" href="../tictactoe.css">
+		<link rel="stylesheet" type="text/css" href="../siteNavigation.css">
+  </head>
+  <body >
+  <div class="header">
+		<site-navigation dataClass="tictaktoe"></site-navigation>
+  </div>
+   <div class="middle">
+	<div id="playerSelection">
+		<p id="play">Play Tic Tac Toe!</P>
+		<p id="players">Choose players:
+			<form name="playerSelect">
+				<input type="radio" name="mode" id="noCyborgs" value="1"><strong>Human-vs-Human</strong></input>
+				<input type="radio" name="mode" id="oneCyborg" value="2" checked><strong>Human-vs-Computer</strong></input>
+			</form>
+		</p>
+		<div id="playground">
+			<table border="1" onclick="game(event);">
+				<tr>
+					<td id="0">&nbsp;&nbsp;&nbsp;</td>
+					<td id="1">&nbsp;&nbsp;&nbsp;</td>
+					<td id="2">&nbsp;&nbsp;&nbsp;</td>
+				</tr> <!-- top row -->
+				<tr>
+					<td id="3">&nbsp;&nbsp;&nbsp;</td>
+					<td id="4">&nbsp;&nbsp;&nbsp;</td>
+					<td id="5">&nbsp;&nbsp;&nbsp;</td>
+				</tr> <!-- middle row -->
+				<tr>
+					<td id="6">&nbsp;&nbsp;&nbsp;</td>
+					<td id="7">&nbsp;&nbsp;&nbsp;</td>
+					<td id="8">&nbsp;&nbsp;&nbsp;</td>
+				</tr> <!-- bottom row -->
+			</table>
+		</div>
+		<div id="messages">
+			<p id="gameResult">&nbsp;</p>
+			<button type="button" onclick="gameReset();" >Reset board</button>
+			<button type="button" onclick="aIBrains(board);" >array</button>
+		</div>
+	</div>
+      </div>
+			<div class="footer">
+				<p></p>
+			</div>
+  </body>
+</html>

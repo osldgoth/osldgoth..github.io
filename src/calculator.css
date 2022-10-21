@@ -1,0 +1,9 @@
+body {
+  background: linear-gradient(to top, hsl(0, 0%, 100%), hsl(0, 100%, 100%))
+}
+
+div {
+  height: 50px;
+  width: 50px;
+  background-color: aquamarine;
+}

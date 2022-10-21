@@ -1,0 +1,59 @@
+/*
+  '*'		All
+	'abc' Element Selector <body>, <p>, <img> etc
+	'#' 	ID selector (used for javascript - unofficial internet rule)
+	'.' 	CLASS selector (used for css rules - unofficial internet rule)
+
+  '~'     PRECEDED by
+  '+'     Immediately after
+  '>'     PARENT
+  ' '     ALL inside
+*/
+
+body{
+  background-color: hsl(210, 14%, 53%);
+  font-family: "AvenirNext","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+table{
+  background-color: hsl(0, 0%, 100%);
+  font-size: 500%;
+  margin: auto;
+}
+
+td{
+  padding-left: .4em;
+  padding-right: .4em;
+}
+
+#playerSelection{
+  text-align: center;
+}
+
+#play{
+  font-size: 3em;
+}
+
+#gameResult{
+  font-size: 1.5em;
+}
+
+.header {
+  grid-area: header;
+  background-color: hsl(155, 50%, 75%);
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.middle {
+  grid-area: middle;
+	background-color: hsl(190, 100%, 40%)
+}
+
+.footer {
+  grid-area: footer;
+  background-color: hsl(155, 50%, 75%);
+  padding: 10px;
+  text-align: center;
+}

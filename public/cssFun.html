@@ -1,0 +1,253 @@
+<!-- using id for javascript and class for css -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../src/cssFun.css">
+    <link rel="stylesheet" type="text/css" href="../src/siteNavigation.css">
+		<title>Stephen's javascript/html projects</title>
+    <script src="../src/siteNavigation.js"></script>
+    <script src="../src/hamburger.js" defer></script>
+    <script src="../src/cssFun.js" defer></script>
+	</head>
+  <body onload="documentIsLoaded()">
+    <div class="header"> 				
+      <site-navigation dataClass="cssFun"></site-navigation>
+    </div>
+		<div class="grid-container">
+			<div class="middle">
+        <!-- <h3>Play around with some of the flex features.</h3>
+        <p>The following containers are Display Flex inside a grid</p>
+      <div class="middleGrid">
+        <div class="combiner-grid"> 
+          <p class="title">Direction row and justify-content flex-start, this is the default</p>
+          <div class="flex-container-row just-start">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction row and justify-content flex-end</p>
+          <div class="flex-container-row just-end">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction row and justify-content center</p>
+          <div class="flex-container-row just-center">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction row and justify-content space-between</p>
+          <div class="flex-container-row just-between">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction row and justify-content space-around</p>
+          <div class="flex-container-row just-around">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction row and justify-content space-evenly</p>
+          <div class="flex-container-row just-even">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+
+        <div class="combiner-grid"> 
+          <p class="title">Direction column and justify-content flex-start</p>
+          <div class="flex-container-col just-start">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction column and justify-content flex-end</p>
+          <div class="flex-container-col just-end">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction column and justify-content center</p>
+          <div class="flex-container-col just-center">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction column and justify-content space-between</p>
+          <div class="flex-container-col just-between">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction column and justify-content space-around</p>
+          <div class="flex-container-col just-around">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+        
+        <div class="combiner-grid"> 
+          <p class="title">Direction column and justify-content space-evenly</p>
+          <div class="flex-container-col just-even">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+      
+        <div class="combiner-grid center"> 
+          <p class="title">flex row that wraps with align-content set to flex-start</p>
+          <div class="flex-container-row-wrap algn-start">
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box2"></div>
+            <div class="box5"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+
+        <div class="combiner-grid center"> 
+          <p class="title">flex row that wraps with align-content set to flex-end</p>
+          <div class="flex-container-row-wrap algn-end">
+            <div class="box4"></div>
+            <div class="box3"></div>
+            <div class="box"></div>
+            <div class="box2"></div>
+            <div class="box5"></div>
+          </div>
+        </div>
+
+        <div class="combiner-grid center"> 
+          <p class="title">flex row that wraps with align-content set to center</p>
+          <div class="flex-container-row-wrap algn-center">
+            <div class="box5"></div>
+            <div class="box3"></div>
+            <div class="box"></div>
+            <div class="box2"></div>
+            <div class="box4"></div>
+          </div>
+        </div>
+
+        <div class="combiner-grid center"> 
+          <p class="title">flex row that wraps with align-content set to space-between</p>
+          <div class="flex-container-row-wrap algn-between">
+            <div class="box"></div>
+            <div class="box3"></div>
+            <div class="box2"></div>
+            <div class="box5"></div>
+            <div class="box4"></div>
+          </div>
+        </div>
+
+        <div class="combiner-grid center"> 
+          <p class="title">flex row that wraps with align-content set to space-around</p>
+          <div class="flex-container-row-wrap algn-around">
+            <div class="box2"></div>
+            <div class="box5"></div>
+            <div class="box3"></div>
+            <div class="box"></div>
+            <div class="box4"></div>
+          </div>
+        </div> -->
+
+        <div class="combiner-grid random"> 
+          <p class="title">row with justify-content set by JS every 5 seconds</p>
+          <p id="values"></p>
+          <div class="flex-container-row-properties" id="flexProperties"> <!-- random  -->
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+
+        <div class="combiner-grid"> 
+          <p class="">Boxes with borders</p>
+          <p id=""></p>
+          <div class="flex-container-row" id="">
+            <div class="dotted-border">dotted</div>
+            <div class="dashed-border">dashed</div>
+            <div class="solid-border">solid</div>
+            <div class="double-border">double</div>
+            <div class="groove-border">groove</div>
+            <div class="ridge-border">ridge</div>
+          </div>
+        </div>
+
+      </div> <!-- end of class middlegrid  -->
+      
+      <div >
+        <p>have some fun with borders [dotted, dashed, solid, double, groove,(180*) ridge, inset,(180*) outset, mixed?]</p>
+        https://youtu.be/aW6qEAQSctY 'fake' borders.
+      </div>
+
+        <p>background-image(1-3+), play around with parallax
+      button animations ftw!!</p>
+      
+        <p>create cascading boxes(buttons) to animate events using borders (changing colors)
+        box-shadow: none|h-offset v-offset blur spread color |inset</p>
+			</div>
+			<div class="footer">
+				<p>Footer</p>
+			</div>
+		</div>
+	</body>
+</html>
